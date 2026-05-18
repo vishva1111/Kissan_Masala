@@ -13,14 +13,16 @@
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="logo-link">
-        <img src="Logo.png" alt="Kissan Masala Logo" class="logo-img" />
-        <span style="display:block;text-align:center;font-size:0.65rem;font-weight:700;color:#e65c00;letter-spacing:1px;margin-top:-4px;">Since 1971</span>
-      </a>
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links nav-links-left" id="navLinksLeft">
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
+      </nav>
+      <a href="#home" class="logo-link">
+        <img src="Logo.png" alt="Kissan Masala Logo" class="logo-img" />
+        <span style="display:block;text-align:center;font-size:0.65rem;font-weight:700;color:#e65c00;letter-spacing:1px;margin-top:-4px;">Since 2002</span>
+      </a>
+      <nav class="nav-links nav-links-right" id="navLinksRight">
         <a href="#why-us">Why Us</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
@@ -34,6 +36,14 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
+    <!-- Decorative floating particles -->
+    <div class="hero-particles">
+      <span class="particle p1"></span>
+      <span class="particle p2"></span>
+      <span class="particle p3"></span>
+      <span class="particle p4"></span>
+      <span class="particle p5"></span>
+    </div>
     <div class="container hero-content">
       <div class="hero-text">
         <img src="Logo.png" alt="Kissan Masala" class="hero-logo" />
@@ -80,6 +90,13 @@
     </div>
   </section>
 
+  <!-- Wave Divider -->
+  <div class="section-divider" style="background:#fff8f5;">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="height:40px;">
+      <path d="M0,20 C480,40 960,0 1440,20 L1440,40 L0,40 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
   <!-- ===== ABOUT ===== -->
   <section class="about section" id="about">
     <div class="container about-grid">
@@ -105,6 +122,13 @@
       </div>
     </div>
   </section>
+
+  <!-- Wave Divider -->
+  <div class="section-divider" style="background:#ffffff;">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="height:40px;">
+      <path d="M0,0 C360,40 1080,0 1440,30 L1440,40 L0,40 Z" fill="#fff8f5"/>
+    </svg>
+  </div>
 
   <!-- ===== PRODUCTS ===== -->
   <section class="products section" id="products">
@@ -315,7 +339,7 @@
             <div>
               <strong>Address</strong>
               <span>Haldal Kaniyad Road, At.Haldal, Dist.: Botad – 364 710, Gujarat</span>
-              <a href="https://www.google.com/maps/search/Kissan%20food%20products/@22.204214096069336,71.62310791015625,17z?hl=en" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-top:4px;font-size:0.75rem;color:#e65c00;" title="View on Google Maps">
+              <a href="https://www.google.com/maps/search/Kissan%20food%20products/@22.204214096069336,71.62310791015625,17z?hl=en" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-top:4px;font-size:0.55rem;color:#e65c00;" title="View on Google Maps">
                 <i class="fas fa-directions"></i>
               </a>
             </div>
@@ -398,7 +422,7 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <img src="Logo.png" alt="Kissan Masala" class="footer-logo" />
-          <p>Bringing the authentic taste of India to your kitchen since 1971. Pure spices, pure love.</p>
+          <p>Bringing the authentic taste of India to your kitchen since 2002. Pure spices, pure love.</p>
           <img src="Pure & Sure.pdf" alt="" style="display:none" />
         </div>
         <div class="footer-links">

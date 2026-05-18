@@ -9,25 +9,32 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== HAMBURGER MENU =====
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
+const hamburger    = document.getElementById('hamburger');
+const navLinksLeft = document.getElementById('navLinksLeft');
+const navLinksRight= document.getElementById('navLinksRight');
+
+function resetHamburger() {
+  hamburger.querySelectorAll('span').forEach(s => {
+    s.style.transform = '';
+    s.style.opacity   = '1';
+  });
+}
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  const isOpen = navLinksLeft.classList.toggle('open');
+  navLinksRight.classList.toggle('open', isOpen);
   const spans = hamburger.querySelectorAll('span');
-  spans[0].style.transform = navLinks.classList.contains('open') ? 'rotate(45deg) translate(5px,5px)' : '';
-  spans[1].style.opacity   = navLinks.classList.contains('open') ? '0' : '1';
-  spans[2].style.transform = navLinks.classList.contains('open') ? 'rotate(-45deg) translate(5px,-5px)' : '';
+  spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)'  : '';
+  spans[1].style.opacity   = isOpen ? '0' : '1';
+  spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)': '';
 });
 
-// Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
+// Close menu when any nav link is clicked
+[...navLinksLeft.querySelectorAll('a'), ...navLinksRight.querySelectorAll('a')].forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    hamburger.querySelectorAll('span').forEach(s => {
-      s.style.transform = '';
-      s.style.opacity   = '1';
-    });
+    navLinksLeft.classList.remove('open');
+    navLinksRight.classList.remove('open');
+    resetHamburger();
   });
 });
 
