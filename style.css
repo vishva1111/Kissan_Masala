@@ -24,7 +24,10 @@
   --gradient-gold: linear-gradient(135deg, var(--gold), var(--yellow));
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -87,6 +90,7 @@ ul { list-style: none; }
 }
 
 .section { padding: 90px 0; }
+section[id], div[id] { scroll-margin-top: 80px; }
 
 /* ===== SECTION HEADER ===== */
 .section-header {
@@ -206,9 +210,11 @@ ul { list-style: none; }
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   height: 72px;
+  gap: 0 24px;
 }
 .logo-link {
   justify-self: center;
+  padding: 0 16px;
 }
 .logo-img {
   height: 52px;
@@ -1037,6 +1043,36 @@ ul { list-style: none; }
 }
 .back-to-top:hover { box-shadow: 0 12px 32px rgba(192,57,43,0.6); }
 .back-to-top.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== WHATSAPP FLOAT BUTTON (Mobile Only) ===== */
+.whatsapp-float {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.5);
+}
+
+.whatsapp-float i {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    display: flex;
+  }
+}
+
 /* ===== LIGHT SHADOW / GLOW EFFECTS ===== */
 
 /* Soft warm glow on product cards */
@@ -1127,20 +1163,21 @@ ul { list-style: none; }
   /* Navbar — centered logo, hamburger right */
   .nav-inner {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 40px 1fr 40px;
     grid-template-rows: 72px auto auto;
     align-items: center;
     height: auto;
   }
   .logo-link {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
     justify-self: center;
   }
   .hamburger {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
     display: flex;
+    justify-self: center;
   }
   .nav-links-left {
     grid-column: 1 / -1;
