@@ -1167,18 +1167,23 @@ section[id], div[id] { scroll-margin-top: 80px; }
     flex-direction: column;
     align-items: stretch;
     height: auto;
-    gap: 0;
+    gap: 0 !important;
     padding: 0;
   }
   .logo-link {
+    position: relative;
     height: 72px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 0 !important;
     justify-self: unset;
+  }
+  .logo-img {
+    height: 44px;
+    max-width: 110px;
   }
   .hamburger {
     position: absolute;
