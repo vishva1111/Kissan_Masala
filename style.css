@@ -592,9 +592,8 @@ section[id], div[id] { scroll-margin-top: 80px; }
   font-size: 0.75rem;
   color: var(--red);
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
   display: block;
 }
 
