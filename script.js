@@ -12,17 +12,21 @@ window.addEventListener('scroll', () => {
 const hamburger    = document.getElementById('hamburger');
 const navLinksLeft = document.getElementById('navLinksLeft');
 const navLinksRight= document.getElementById('navLinksRight');
+const logoLink     = document.querySelector('.logo-link');
 
 function resetHamburger() {
   hamburger.querySelectorAll('span').forEach(s => {
     s.style.transform = '';
     s.style.opacity   = '1';
   });
+  if (logoLink) logoLink.style.display = '';
 }
 
 hamburger.addEventListener('click', () => {
   const isOpen = navLinksLeft.classList.toggle('open');
   navLinksRight.classList.toggle('open', isOpen);
+  // Hide logo completely (no space) when menu is open
+  if (logoLink) logoLink.style.display = isOpen ? 'none' : '';
   const spans = hamburger.querySelectorAll('span');
   spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)'  : '';
   spans[1].style.opacity   = isOpen ? '0' : '1';

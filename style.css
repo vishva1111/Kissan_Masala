@@ -1161,7 +1161,7 @@ section[id], div[id] { scroll-margin-top: 80px; }
   .container { padding: 0 18px; }
   body { overflow-x: hidden; }
 
-  /* Navbar */
+  /* Navbar — centered logo, hamburger absolute right */
   .nav-inner {
     position: relative;
     display: flex;
@@ -1173,7 +1173,7 @@ section[id], div[id] { scroll-margin-top: 80px; }
   }
   .logo-link {
     position: relative;
-    height: 68px;
+    height: 72px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1184,13 +1184,13 @@ section[id], div[id] { scroll-margin-top: 80px; }
   }
   .logo-img {
     height: 44px;
-    max-width: 120px;
+    max-width: 110px;
   }
   .hamburger {
     position: absolute;
     top: 0;
     right: 16px;
-    height: 68px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
